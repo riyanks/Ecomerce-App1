@@ -1,12 +1,13 @@
 from flask import Flask
 from flask_restx import Api
-from models import Recipe, User
+from models import Recipe, User, Product, Admin
 from exts import db
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
 from recipes import recipe_ns
 from auth import auth_ns
 from product import product_ns
+from admin import authadm_ns
 from flask_cors import CORS
 
 def create_app(config):
@@ -25,11 +26,12 @@ def create_app(config):
     api.add_namespace(recipe_ns)
     api.add_namespace(auth_ns)
     api.add_namespace(product_ns)
+    api.add_namespace(authadm_ns)
 
 
     # model (serializer)
     @app.shell_context_processor
     def make_shell_context():
-        return {"db": db, "Recipe": Recipe, "user": User, "Product":Product}
+        return {"db": db, "Recipe": Recipe, "user": User, "Product":Product, "Admin":Admin}
 
     return app

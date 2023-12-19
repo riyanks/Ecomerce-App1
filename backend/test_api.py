@@ -55,6 +55,42 @@ class APITestCase(unittest.TestCase):
         # print(json)
 
         self.assertEqual(status_code, 200)
+    
+    def test_signup_admin(self):
+        signup_response = self.client.post(
+            "/admin/signupadm",
+            json={
+                "username": "testuser",
+                "email": "testuser@test.com",
+                "password": "password"
+            }
+        )
+
+        status_code = signup_response.status_code
+
+        self.assertEqual(status_code, 201)
+    
+    def test_login_admin(self):
+        signup_response = self.client.post(
+            "/admin/signupadm",
+            json={
+                "username": "testuser",
+                "email": "testuser@test.com",
+                "password": "password",
+            },
+        )
+
+        login_response = self.client.post(
+            "admin/loginadm", json={"username": "testuser", "password": "password"}
+        )
+
+        status_code = login_response.status_code
+
+        json = login_response.json
+
+        # print(json)
+
+        self.assertEqual(status_code, 200)
 
     def test_get_all_recipes(self):
         """TEST GETTING ALL RECIPES"""
