@@ -1,11 +1,11 @@
 # PWL-Tubes
 
 ## Anggota kelompok
-- Faisal Khairul Fasha 
-- Faustine Elvaretta Tambila
-- Riyan Khoiri Siregar
-- Dzakkir Latifan Makarim
-- Raja Josua Simanungkalit
+- Faisal Khairul Fasha 120140158
+- Faustine Elvaretta Tambila 120140157
+- Riyan Khoiri Siregar 120140212
+- Dzakkir Latifan Makarim 120140240
+- Raja Josua Simanungkalit 120140134
 
 ## About the project
 Proyek ini merupakan perancangan aplikasi jual-beli atau e-commerce yang berfokus kepada penjualan pakaian berbasis website yang dapat memberikan fasilitas antara penjual dan pembeli secara daring. Proyek ini mengembangkan sistem e-commerce untuk penjualan pakaian online dengan metode pengembangan waterfall meliputi analisis, perancangan, implementasi, pengujian, dan pemeliharaan. Sistem ini menggunakan  React untuk front end, dan Python untuk back end. Pada proyek ini, kami memakai metode pengembangan waterfall untuk melakukan pengembangan proyek.
